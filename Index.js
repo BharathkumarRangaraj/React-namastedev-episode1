@@ -25,13 +25,14 @@ const Header=()=>{
 }
 //body
 
-const Rescard=()=>{
+const Rescard=(props)=>{
+    const {resData}=props;
     return(
         <div className='cardss'>
             <img className='Card-image' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS-asnXknZFMozPIr0txBTShDqR8ii18lrlwMtZG9BCA&usqp=CAU&ec=48600112'/>
-            <h3>Biryani</h3>
-            <h4>Moctails,cusines,fastfoods</h4>
-            <h4>Rating: 4.5</h4>
+            <h3>{resData.data.name}</h3>
+            <h4>{resData.cuisines}</h4>
+            <h4>: 4.5</h4>
             <h4>35 minutes</h4>
         </div>
     )
@@ -41,20 +42,173 @@ const Rescontainer=()=>{
     return(
         <div>
             <div className='card'>
-            <Rescard/>
-            <Rescard/>
-            <Rescard/>
-            <Rescard/>
-            <Rescard/>
-            <Rescard/>
-            <Rescard/>
-            <Rescard/>
+            <Rescard resData={Restobj}/>
+          
+           
             </div>
 
         </div>
     )
 }
-
+const Restobj=
+    {
+        "type": "restaurant",
+        "data": {
+          "type": "F",
+          "id": "67645",
+          "name": "Night Lion by Madhampatty Pakashala",
+          "uuid": "372098e0-4c40-40ca-9ec4-f363863e1f17",
+          "city": "14",
+          "area": "Peelamedu",
+          "totalRatingsString": "10000+ ratings",
+          "cloudinaryImageId": "qgck9fzi17ljdvwboljb",
+          "cuisines": [
+            "North Indian",
+            "South Indian",
+            "Chinese",
+            "Haleem"
+          ],
+          "tags": [
+            
+          ],
+          "costForTwo": 30000,
+          "costForTwoString": "₹300 FOR TWO",
+          "deliveryTime": 44,
+          "minDeliveryTime": 44,
+          "maxDeliveryTime": 44,
+          "slaString": "44 MINS",
+          "lastMileTravel": 4.599999904632568,
+          "slugs": {
+            "restaurant": "fireflies-night-restaurant-peelamedu-peelamedu",
+            "city": "coimbatore"
+          },
+          "cityState": "14",
+          "address": "Nehru street, Avinashi road, Peelamedu, Coimbatore",
+          "locality": "Gauthama Puri Nagar",
+          "parentId": 377170,
+          "unserviceable": false,
+          "veg": false,
+          "select": false,
+          "favorite": false,
+          "tradeCampaignHeaders": [
+            
+          ],
+          "aggregatedDiscountInfo": {
+            "header": "40% off",
+            "shortDescriptionList": [
+              {
+                "meta": "40% off | Use TRYNEW",
+                "discountType": "Percentage",
+                "operationType": "RESTAURANT"
+              }
+            ],
+            "descriptionList": [
+              {
+                "meta": "40% off up to ₹80 | Use code TRYNEW",
+                "discountType": "Percentage",
+                "operationType": "RESTAURANT"
+              }
+            ],
+            "subHeader": "",
+            "headerType": 0,
+            "superFreedel": ""
+          },
+          "aggregatedDiscountInfoV2": {
+            "header": "40% OFF",
+            "shortDescriptionList": [
+              {
+                "meta": "Use TRYNEW",
+                "discountType": "Percentage",
+                "operationType": "RESTAURANT"
+              }
+            ],
+            "descriptionList": [
+              {
+                "meta": "40% off up to ₹80 | Use code TRYNEW",
+                "discountType": "Percentage",
+                "operationType": "RESTAURANT"
+              }
+            ],
+            "subHeader": "",
+            "headerType": 0,
+            "superFreedel": ""
+          },
+          "ribbon": [
+            {
+              "type": "PROMOTED"
+            }
+          ],
+          "chain": [
+            
+          ],
+          "feeDetails": {
+            "fees": [
+              {
+                "name": "distance",
+                "fee": 3200,
+                "message": ""
+              },
+              {
+                "name": "time",
+                "fee": 0,
+                "message": ""
+              },
+              {
+                "name": "special",
+                "fee": 0,
+                "message": ""
+              }
+            ],
+            "totalFees": 3200,
+            "message": "",
+            "title": "Delivery Charge",
+            "amount": "3200",
+            "icon": ""
+          },
+          "availability": {
+            "opened": true,
+            "nextOpenMessage": "",
+            "nextCloseMessage": ""
+          },
+          "longDistanceEnabled": 0,
+          "rainMode": "NONE",
+          "thirdPartyAddress": false,
+          "thirdPartyVendor": "",
+          "adTrackingID": "cid=6110529~p=1~eid=00000187-32f2-10d6-0822-c54d00110115",
+          "badges": {
+            "imageBased": [
+              
+            ],
+            "textBased": [
+              
+            ],
+            "textExtendedBadges": [
+              
+            ]
+          },
+          "lastMileTravelString": "4.5 kms",
+          "hasSurge": false,
+          "sla": {
+            "restaurantId": "67645",
+            "deliveryTime": 44,
+            "minDeliveryTime": 44,
+            "maxDeliveryTime": 44,
+            "lastMileTravel": 4.599999904632568,
+            "lastMileDistance": 0,
+            "serviceability": "SERVICEABLE",
+            "rainMode": "NONE",
+            "longDistance": "NOT_LONG_DISTANCE",
+            "preferentialService": false,
+            "iconType": "EMPTY"
+          },
+          "promoted": true,
+          "avgRating": "4.0",
+          "totalRatings": 10000,
+          "new": false
+        },
+        "subtype": "basic"
+      
+}
 const Body=()=>{
     return(
         <div className='body'>
