@@ -1,5 +1,37 @@
-#headings{
-    color:blue
-    
-    
+.header{
+display: flex;
+border: 1px solid black;
+
+justify-content: space-between;
+
 }
+.navitems>ul>li{
+    display:flex;
+    margin-right: 20px;
+   
+}
+
+.navitems ul{
+    display: flex;
+    padding: 0px 20px;
+    margin-right: 10px;
+
+}
+.image{
+    height:85%;
+    width:45px;
+    padding: 4px;
+}
+.Card-image{
+    height: 150px;
+    width:150px ;
+
+}
+.card{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cardss:hover{
+    border: 1px solid black;
+}
+
