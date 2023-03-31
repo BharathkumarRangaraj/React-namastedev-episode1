@@ -19,19 +19,24 @@ justify-content: space-between;
 }
 .image{
     height:85%;
-    width:45px;
+    width:70px;
     padding: 4px;
 }
-.Card-image{
-    height: 150px;
-    width:150px ;
 
-}
 .card{
     display: flex;
     flex-wrap: wrap;
+    
 }
 .cardss:hover{
     border: 1px solid black;
 }
+.cardss{
+    background-color: grey;
+    
+    width: 200px;
+}
+.res-card-image{
+width: 100%;
 
+}

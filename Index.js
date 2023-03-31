@@ -29,11 +29,12 @@ const Rescard=(props)=>{
     const {resData}=props;
     return(
         <div className='cardss'>
-            <img className='Card-image' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS-asnXknZFMozPIr0txBTShDqR8ii18lrlwMtZG9BCA&usqp=CAU&ec=48600112'/>
-            <h3>{resData.data.name}</h3>
-            <h4>{resData.cuisines}</h4>
-            <h4>: 4.5</h4>
-            <h4>35 minutes</h4>
+            <img className='res-card-image' src={'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/'+resData.data.cloudinaryImageId}/>
+            <h4>{resData.data.name}</h4>
+            <h4>{resData.data.cuisines.join(', ')}</h4>
+            <h4>{resData.data.avgRating}</h4>
+            <h4>${resData.data.costForTwo/100} </h4>
+            <h4>{resData.data.deliveryTime} Minutes</h4>
         </div>
     )
 }
