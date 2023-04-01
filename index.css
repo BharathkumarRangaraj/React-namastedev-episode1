@@ -3,6 +3,7 @@ display: flex;
 border: 1px solid black;
 
 justify-content: space-between;
+background-color: rgb(233, 191, 106);
 
 }
 .navitems>ul>li{
@@ -26,6 +27,10 @@ justify-content: space-between;
 .card{
     display: flex;
     flex-wrap: wrap;
+    padding: 5px;
+    margin: 5px;
+    
+    
     
 }
 .cardss:hover{
@@ -35,8 +40,11 @@ justify-content: space-between;
     background-color: grey;
     
     width: 200px;
+    margin: 5px;
+    
 }
 .res-card-image{
+    height: 150px;
 width: 100%;
 
 }
