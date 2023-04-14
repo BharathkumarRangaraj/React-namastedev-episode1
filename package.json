@@ -2,12 +2,10 @@
   "name": "namaste_react",
   "version": "1.0.0",
   "description": "Ths  Akshau shans react course",
-  
   "scripts": {
-    "start":"parcel index.html",
-    "build":"parcel build index.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
-  
   },
   "repository": {
     "type": "git",
@@ -24,7 +22,13 @@
     "process": "^0.11.10"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.12.0",
+    "@mui/styled-engine-sc": "^5.12.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-shimmer": "^3.2.0",
+    "styled-components": "^5.3.9"
   }
 }

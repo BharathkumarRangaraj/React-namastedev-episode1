@@ -58,3 +58,16 @@ width: 100%;
 .filter-btn{
     margin: 5px;
 }
+
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin: 5px;
+    height: 90% ;
+    width: auto;
+    margin: 5px;
+    padding: 5px;
+}
+
+

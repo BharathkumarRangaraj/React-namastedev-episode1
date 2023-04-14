@@ -7,7 +7,7 @@ import Shimmer from "./Shimmer";
 
 function Searchdata(searchinput,listofRestraunt){
     var datas=listofRestraunt.filter((ress)=>
-        ress?.data?.name?.includes(searchinput)    
+        ress?.data?.name?.toLowerCase()?.includes(searchinput.toLowerCase())   
            
 )
     return datas;
@@ -34,8 +34,11 @@ const Body=()=>{
 
     }
     {console.log('render')}
+
     
-    return (listofRestraunt.length===0)?<Shimmer/>:(
+    if(!listofRestraunt) return  null;
+    if(!fiternedRestraunt) return <h1>No Result found for your search...</h1>;
+    return (fiternedRestraunt.length===0)?<Shimmer/>:(
         <div className='body'>
             <div className='filter-btn'>
                 <button onClick={()=>{
@@ -45,7 +48,7 @@ const Body=()=>{
                 }
                 } >
                     
-                filter
+                Rating filter
                 </button>
 
 
