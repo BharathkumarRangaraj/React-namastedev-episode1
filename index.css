@@ -59,15 +59,17 @@ width: 100%;
     margin: 5px;
 }
 
-.wrap{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5px;
-    margin: 5px;
-    height: 90% ;
-    width: auto;
+.shmmer-card{
+    background-color: grey;
+    width: 180px;
+    height: 350PX;
     margin: 5px;
     padding: 5px;
+}
+.search-shmmer{
+    background-color: grey;
+    width: 200px;
+    
 }
 
 

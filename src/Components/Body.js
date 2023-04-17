@@ -31,11 +31,11 @@ const Body=()=>{
         setlistofRestraunt(json.data?.cards[2]?.data?.data?.cards);
         setfiternedRestraunt(json.data?.cards[2]?.data?.data?.cards);
         
-
+ 
     }
     {console.log('render')}
 
-    
+    //early return expresson
     if(!listofRestraunt) return  null;
     if(!fiternedRestraunt) return <h1>No Result found for your search...</h1>;
     return (fiternedRestraunt.length===0)?<Shimmer/>:(
