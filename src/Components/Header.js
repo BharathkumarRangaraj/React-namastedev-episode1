@@ -1,9 +1,13 @@
 import { CDN_URL } from "../Utils/Constants";
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 
+
 const Header=()=>{
-    const[isLoggedin,setisLoggedin]=useState(false)
+    
+   
+
+
     return(
         <div className='header'>
             <div>
@@ -21,7 +25,7 @@ const Header=()=>{
                     <li><Link to='/about'>About</Link></li>
                     <li>Cart</li>
                     {/*login authuntcaton*/}
-                    <li>{isLoggedin===true ?<button onClick={()=>setisLoggedin(false)} style={{paddingRight:'5px'}}>log out</button>:<button style={{paddingRight:'5px'}} onClick={()=>setisLoggedin(true)}>login</button>}</li>
+                    <li><Link to='/login'><button>Login</button></Link></li>
                 </ul>
             </div>
         </div>

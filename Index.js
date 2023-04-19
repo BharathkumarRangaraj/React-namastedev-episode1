@@ -8,6 +8,8 @@ import Body from './src/Components/Body';
 import Footer from './src/Components/Footer';
 import Header from './src/Components/Header';
 import RestrauntMenu from './src/Components/RestrauntMenu';
+import Loggin from './src/Components/Login';
+
 
 const Applayout=()=>{
     return(
@@ -39,6 +41,10 @@ const routerApp=createBrowserRouter([
                        {
                         path:'/restraunts/:id',
                         element:<RestrauntMenu/>,
+                       },
+                       {
+                        path:'/login',
+                        element:<Loggin/>,
                        },
             {
                 path:'/contact',

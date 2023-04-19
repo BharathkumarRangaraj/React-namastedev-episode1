@@ -2,6 +2,8 @@ import Rescard from "./Rescard";
 import Reslist from '../Utils/Mockdata';
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
+
 
 
 
@@ -73,9 +75,16 @@ const Body=()=>{
                 
                </div>
                <div className='rescard-container'>
-                
+               
 {
-   fiternedRestraunt.map((res)=> <Rescard key={res.data.id} resData={res}/>
+   fiternedRestraunt.map((res)=> {
+   return (!res)?<Shimmer/>:(
+    <Link to={'/restraunts/'+res.data.id}>
+    <Rescard key={res.data.id} resData={res}/>
+    </Link>
+
+   )
+   }
   )
 }
             
