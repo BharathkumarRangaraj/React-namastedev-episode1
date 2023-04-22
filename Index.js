@@ -9,6 +9,7 @@ import Footer from './src/Components/Footer';
 import Header from './src/Components/Header';
 import RestrauntMenu from './src/Components/RestrauntMenu';
 import Loggin from './src/Components/Login';
+import Profile from './src/Components/Profile';
 
 
 const Applayout=()=>{
@@ -30,6 +31,10 @@ const routerApp=createBrowserRouter([
                 path:'/about',
                 
                 element:<About/>,
+                children:[{
+                    path:'profile',
+                    element:<Profile/>
+                }]
         
                    },
                    {

@@ -1,4 +1,5 @@
 import { useFormik } from "formik";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Loggin=()=>{
@@ -14,6 +15,8 @@ const Loggin=()=>{
     
 
     })
+
+    
     
     return(
         
@@ -23,8 +26,9 @@ const Loggin=()=>{
             <input type="text"
             id='firstname'
             name='firstname'
+            
+           
             onChange={formik.onChange}
-            value={formik.values.firstname}
 
 
             
@@ -36,7 +40,7 @@ const Loggin=()=>{
             id='lastname'
             name='lastname'
             onChange={formik.onChange}
-            value={formik.values.lastname}
+        
 
 
             
@@ -48,7 +52,7 @@ const Loggin=()=>{
             id=' email'
             name=' email'
             onChange={formik.onChange}
-            value={formik.values.email}
+            
 
 
             
