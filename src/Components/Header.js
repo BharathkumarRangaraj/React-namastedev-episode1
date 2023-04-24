@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 
 const Header=()=>{
-    
    
 
-
+   
+    
     return(
         <div className='header'>
             <div>
@@ -25,6 +25,7 @@ const Header=()=>{
                     <li><Link to='/about'>About</Link></li>
                     <li>Cart</li>
                     {/*login authuntcaton*/}
+    
                     <li><Link to='/login'><button>Login</button></Link></li>
                 </ul>
             </div>

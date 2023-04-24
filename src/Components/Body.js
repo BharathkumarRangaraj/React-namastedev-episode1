@@ -3,23 +3,14 @@ import Reslist from '../Utils/Mockdata';
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-
-
-
-
-function Searchdata(searchinput,listofRestraunt){
-    var datas=listofRestraunt.filter((ress)=>
-        ress?.data?.name?.toLowerCase()?.includes(searchinput.toLowerCase())   
-           
-)
-    return datas;
-    
-}
+import Searchdata from "../Utils/SearchFlter";
+import useOnline from "../Utils/useOnline";
 
 const Body=()=>{
     const[listofRestraunt,setlistofRestraunt]=useState([]);
     const[fiternedRestraunt,setfiternedRestraunt]=useState([]);
     const [searchinput,setsearchinput]=useState('');
+    
     
     useEffect(()=>{
         console.log('useeffect render')
@@ -32,14 +23,20 @@ const Body=()=>{
         console.log(json)
         setlistofRestraunt(json.data?.cards[2]?.data?.data?.cards);
         setfiternedRestraunt(json.data?.cards[2]?.data?.data?.cards);
-        
- 
     }
     {console.log('render')}
 
+    const isOnline=useOnline();
+
     //early return expresson
+    if(!isOnline) {
+        return <h1>Ofline,please check your internet !!!</h1>
+    }
     if(!listofRestraunt) return  null;
     if(!fiternedRestraunt) return <h1>No Result found for your search...</h1>;
+   
+
+
     return (fiternedRestraunt.length===0)?<Shimmer/>:(
         <div className='body'>
             <div className='filter-btn'>

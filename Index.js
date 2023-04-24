@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import Error from './src/Components/Error';
-import About from './src/Components/About';
 import { createBrowserRouter,RouterProvider,Outlet} from 'react-router-dom';
 import Contact from './src/Components/Contact';
 import Body from './src/Components/Body';
@@ -10,6 +9,9 @@ import Header from './src/Components/Header';
 import RestrauntMenu from './src/Components/RestrauntMenu';
 import Loggin from './src/Components/Login';
 import Profile from './src/Components/Profile';
+import Shimmer from './src/Components/Shimmer';
+
+const Aboutt=lazy(()=>import('./src/Components/About'))
 
 
 const Applayout=()=>{
@@ -29,11 +31,12 @@ const routerApp=createBrowserRouter([
         children:[
             {
                 path:'/about',
-                
-                element:<About/>,
+                element:
+                <Suspense fallback={<Shimmer/>}><Aboutt/></Suspense>,
                 children:[{
                     path:'profile',
-                    element:<Profile/>
+                    element:
+                    <Profile/>
                 }]
         
                    },
