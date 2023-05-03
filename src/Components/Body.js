@@ -38,9 +38,9 @@ const Body=()=>{
 
 
     return (fiternedRestraunt.length===0)?<Shimmer/>:(
-        <div className='body'>
-            <div className='filter-btn'>
-                <button onClick={()=>{
+        <div >
+            <div className="bg-purple-200">
+                <button className="bg-yellow-100 border-color:black hover:bg-sky-700 font-medium p-2 m-2" onClick={()=>{
                 const filtered_cards=listofRestraunt.filter((res)=>res.data.avgRating>4);
                 setfiternedRestraunt(filtered_cards)
 
@@ -62,7 +62,7 @@ const Body=()=>{
                     }}
                     
                     />
-                    <button className="search-btn" onClick={()=>{
+                    <button className="hover:bg-violet-600 active:bg-violet-700 bg-pink-100 font-medium m-2" onClick={()=>{
                        const datass=Searchdata(searchinput,listofRestraunt);
                        setfiternedRestraunt(datass);
                     }}>search</button>
@@ -71,14 +71,16 @@ const Body=()=>{
                 </div>
                 
                </div>
-               <div className='rescard-container'>
+               <div className='flex flex-wrap h-300 w-200  border border-black'>
                
 {
    fiternedRestraunt.map((res)=> {
    return (!res)?<Shimmer/>:(
+    
     <Link to={'/restraunts/'+res.data.id}>
-    <Rescard key={res.data.id} resData={res}/>
+    <Rescard className="flex" key={res.data.id} resData={res}/>
     </Link>
+    
 
    )
    }

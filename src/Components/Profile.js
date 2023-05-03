@@ -17,10 +17,7 @@ class Profile extends React.Component {
     this.setState({color: 2});
     console.log('componentDdupdate')
   }
-  componentWillUnmount(){
-    
-
-  }
+ 
   
   render() {
     console.log('profe render');
