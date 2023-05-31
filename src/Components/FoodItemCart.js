@@ -7,7 +7,7 @@ const FoodItem=({avgRating,name,cloudinaryImageId,cuisines,costForTwo})=>{
             <img  src={Swiggy_URL +cloudinaryImageId}/>
             <div className="cardss-content">
             <h1 className="font-bold">{name}</h1>
-            <h4 className="font-normal">{cuisines.join(', ')}</h4>
+            <h3 className="font-normal">{cuisines.join(', ')}</h3>
             <h4 className="font-normal">{avgRating} Rating</h4>
             <h4 className="font-normal">{costForTwo/100} Rupees </h4>
             
